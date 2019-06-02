@@ -1,11 +1,6 @@
 axon:
   amqp:
     exchange: users
-#  eventhandling:
-#    processors:
-#      amqpEvents:
-#        source: peaas_wallet
-#        mode: tracking
 
 server:
   port: 9000
