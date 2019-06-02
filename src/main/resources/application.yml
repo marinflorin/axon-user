@@ -1,0 +1,29 @@
+axon:
+  amqp:
+    exchange: users
+#  eventhandling:
+#    processors:
+#      amqpEvents:
+#        source: peaas_wallet
+#        mode: tracking
+
+server:
+  port: 9000
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_demo
+    username: postgres
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.default_schema: public
+      hibernate.show_sql: false
+      hibernate.format_sql: false
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
